@@ -2,7 +2,7 @@ services:
   - type: web
     name: stickdrift-web
     runtime: static
-    buildCommand: echo "No build step"
+    buildCommand: echo "static"
     staticPublishPath: web
     routes:
       - type: rewrite
