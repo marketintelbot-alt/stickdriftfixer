@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Driftline Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape bg-shape-a"></div>
+    <div class="bg-shape bg-shape-b"></div>
+
+    <main class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">Driftline Web</p>
+        <h1>Controller Drift Calibration In Browser</h1>
+        <p class="subtitle">
+          Connect a gamepad, map stick axes with circular movement, calibrate centers/deadzones, and export a profile.
+        </p>
+        <p id="connectionStatus" class="chip">No gamepad connected</p>
+      </header>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Gamepad</h2>
+          <div class="row">
+            <label for="gamepadSelect">Device</label>
+            <select id="gamepadSelect"></select>
+          </div>
+          <div class="actions">
+            <button id="refreshPadsBtn">Refresh Devices</button>
+            <button id="useFirstBtn">Use First Connected</button>
+          </div>
+          <p class="hint">Use a Chromium-based browser for best Gamepad API support.</p>
+        </article>
+
+        <article class="card">
+          <h2>Mapping + Calibration</h2>
+          <div class="actions">
+            <button id="mapAxesBtn">Run Axis Mapping Wizard</button>
+            <button id="calibrateBtn">Calibrate Profile</button>
+          </div>
+          <p id="mappingLabel" class="mono">Mapping: left=(0,1) right=(2,3)</p>
+          <p id="profileLabel" class="mono">Profile: not calibrated</p>
+        </article>
+
+        <article class="card span-2">
+          <h2>Live Sticks</h2>
+          <div class="sticks">
+            <div class="stick-panel">
+              <h3>Left Stick</h3>
+              <p id="leftRaw" class="mono">Raw: (0.000, 0.000)</p>
+              <p id="leftFixed" class="mono">Fixed: (0.000, 0.000)</p>
+              <div class="meter"><div id="leftMeter" class="meter-fill"></div></div>
+            </div>
+            <div class="stick-panel">
+              <h3>Right Stick</h3>
+              <p id="rightRaw" class="mono">Raw: (0.000, 0.000)</p>
+              <p id="rightFixed" class="mono">Fixed: (0.000, 0.000)</p>
+              <div class="meter"><div id="rightMeter" class="meter-fill"></div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card span-2">
+          <h2>Profiles</h2>
+          <div class="actions wrap">
+            <button id="saveLocalBtn">Save To Browser</button>
+            <button id="loadLocalBtn">Load From Browser</button>
+            <button id="exportBtn">Export JSON</button>
+            <button id="importBtn">Import JSON</button>
+            <button id="resetBtn" class="danger">Reset</button>
+          </div>
+          <input id="importInput" type="file" accept="application/json" hidden />
+          <pre id="profileDump" class="dump"></pre>
+        </article>
+
+        <article class="card span-2">
+          <h2>Session Log</h2>
+          <pre id="log" class="log"></pre>
+        </article>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

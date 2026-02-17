@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: driftline-web
+    runtime: static
+    plan: free
+    buildCommand: "echo 'Static site: no build step'"
+    staticPublishPath: ./web
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
