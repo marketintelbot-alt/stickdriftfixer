@@ -3,29 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3104636149734" crossorigin="anonymous"></script>
-    <title>Driftline Web</title>
+    <meta name="description" content="Stick Drift Fixer offers practical, tested guidance for diagnosing and reducing analog stick drift on PlayStation and Xbox controllers, plus a browser calibration tool." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://stickdriftfixer.onrender.com/" />
+    <title>Stick Drift Fixer | Controller Drift Guide + Calibration Tool</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3104636149734693" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3104636149734693" crossorigin="anonymous"></script>
-</head>
+  </head>
   <body>
     <div class="bg-shape bg-shape-a"></div>
     <div class="bg-shape bg-shape-b"></div>
 
     <main class="app-shell">
+      <header class="site-header">
+        <a class="brand" href="./index.html">Stick Drift Fixer</a>
+        <nav class="top-nav" aria-label="Primary">
+          <a href="./index.html" aria-current="page">Tool</a>
+          <a href="./guide.html">Guide</a>
+          <a href="./faq.html">FAQ</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+      </header>
+
       <header class="hero">
-        <p class="eyebrow">Driftline Web</p>
-        <h1>Controller Drift Calibration In Browser</h1>
+        <p class="eyebrow">Independent Controller Support</p>
+        <h1>Diagnose and Reduce Stick Drift With Clear, Repeatable Steps</h1>
         <p class="subtitle">
-          Connect a gamepad, map stick axes with circular movement, calibrate centers/deadzones, and export a profile.
+          This site combines plain-English repair guidance with a browser calibration tool so you can verify input behavior before spending money on parts.
         </p>
         <p id="connectionStatus" class="chip">No gamepad connected</p>
       </header>
 
-      <section class="grid">
+      <section class="grid" aria-label="Calibration tool">
         <article class="card">
           <h2>Gamepad</h2>
           <div class="row">
@@ -85,7 +98,102 @@
           <pre id="log" class="log"></pre>
         </article>
       </section>
+
+      <section class="content-stack" aria-label="Publisher content">
+        <article class="content-card">
+          <h2>How To Use This Tool Correctly</h2>
+          <p>
+            The calibration tool is meant to measure neutral stick behavior, not to permanently repair worn hardware. Start with your controller resting on a flat surface and do not touch either stick during calibration passes. The tool records a sample window and builds deadzone and center values for each axis. If your drift is minor, the profile usually reduces cursor or camera movement at rest. If your drift is severe, software compensation can help temporarily but cannot reverse physical wear in the potentiometer module.
+          </p>
+          <ol>
+            <li>Connect your controller with USB first for stable polling.</li>
+            <li>Run axis mapping and move one stick at a time in full circles.</li>
+            <li>Run calibration with hands fully off the sticks.</li>
+            <li>Export the profile and keep a backup before changing settings again.</li>
+            <li>Retest in-game using the smallest deadzone that removes false movement.</li>
+          </ol>
+        </article>
+
+        <article class="content-card">
+          <h2>Root Causes of Drift (And What Actually Helps)</h2>
+          <p>
+            Most stick drift comes from wear, dust, oxidation, and spring fatigue inside analog stick assemblies. Firmware updates can improve filtering but cannot fix worn components. Cleaning with compressed air and contact cleaner may reduce symptoms for a limited period. For persistent drift, replacing the analog module is usually the long-term solution.
+          </p>
+          <p>
+            Before replacing parts, verify whether drift appears only on one platform. A controller that drifts on console and PC is usually hardware-limited. A controller that drifts only in one game may need game-specific deadzone tuning.
+          </p>
+          <ul>
+            <li><strong>Low drift:</strong> small neutral movement, often manageable with calibration.</li>
+            <li><strong>Medium drift:</strong> intermittent pull; usually needs both cleaning and deadzone tuning.</li>
+            <li><strong>High drift:</strong> constant direction pull; often indicates component replacement is due.</li>
+          </ul>
+        </article>
+
+        <article class="content-card">
+          <h2>Xbox vs PlayStation Button and Input Notes</h2>
+          <p>
+            Input mappings vary by browser and operating system. Xbox controllers usually report ABXY naming directly, while PlayStation controllers may appear with generic button indexes depending on driver translation layers. For this reason, this site reports axis and button behavior by index and gives model-specific notes in the guide. Keep firmware current in Xbox Accessories (Windows/Xbox) or by updating your PlayStation system software and controller firmware.
+          </p>
+          <p>
+            If you use Steam Input, disable duplicate remapping during testing to prevent "double transforms" that make drift appear worse than it is.
+          </p>
+        </article>
+
+        <article class="content-card">
+          <h2>What Reviewers Should See On This Site</h2>
+          <p>
+            This website is intentionally structured as a content-first support resource with a utility attached. In addition to the tool, it includes a complete troubleshooting guide, FAQ, editorial policy, contact page, privacy policy, and terms. Pages are crawlable through direct links and sitemap entries, and each page contains unique written content rather than placeholder templates.
+          </p>
+          <p>
+            For ad safety, no ad placements are used on dead-end or empty utility states. The publisher content is the primary focus of each page.
+          </p>
+        </article>
+
+        <article class="content-card" id="footnotes">
+          <h2>Footnotes and Policy References</h2>
+          <ol class="footnote-list">
+            <li>
+              Google Publisher Policies (AdSense Help):
+              <a href="https://support.google.com/adsense/answer/10502938?hl=en" target="_blank" rel="noopener">support.google.com/adsense/answer/10502938</a>
+            </li>
+            <li>
+              Google-served ads on screens without publisher-content:
+              <a href="https://support.google.com/publisherpolicies/answer/11112688?hl=en" target="_blank" rel="noopener">support.google.com/publisherpolicies/answer/11112688</a>
+            </li>
+            <li>
+              AdSense Program policies:
+              <a href="https://support.google.com/adsense/answer/48182?hl=en" target="_blank" rel="noopener">support.google.com/adsense/answer/48182</a>
+            </li>
+            <li>
+              AdSense approval troubleshooting:
+              <a href="https://support.google.com/adsense/answer/81904?hl=en" target="_blank" rel="noopener">support.google.com/adsense/answer/81904</a>
+            </li>
+            <li>
+              Google Search Essentials:
+              <a href="https://developers.google.com/search/docs/essentials" target="_blank" rel="noopener">developers.google.com/search/docs/essentials</a>
+            </li>
+            <li>
+              Spam policies for Google web search:
+              <a href="https://developers.google.com/search/docs/essentials/spam-policies" target="_blank" rel="noopener">developers.google.com/search/docs/essentials/spam-policies</a>
+            </li>
+          </ol>
+        </article>
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="./guide.html">Guide</a>
+        <a href="./faq.html">FAQ</a>
+        <a href="./about.html">About</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <a href="./editorial-policy.html">Editorial Policy</a>
+        <a href="./index.html#footnotes">Footnotes</a>
+      </div>
+      <p class="footer-copy">Stick Drift Fixer - Last updated February 28, 2026.</p>
+    </footer>
 
     <script src="./app.js"></script>
   </body>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Step-by-step stick drift diagnosis and mitigation guide for Xbox and PlayStation controllers." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://stickdriftfixer.onrender.com/guide.html" />
+    <title>Stick Drift Fix Guide | Stick Drift Fixer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape bg-shape-a"></div>
+    <div class="bg-shape bg-shape-b"></div>
+
+    <main class="page-main">
+      <header class="site-header">
+        <a class="brand" href="./index.html">Stick Drift Fixer</a>
+        <nav class="top-nav" aria-label="Primary">
+          <a href="./index.html">Tool</a>
+          <a href="./guide.html" aria-current="page">Guide</a>
+          <a href="./faq.html">FAQ</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <header class="page-hero">
+        <p class="eyebrow">Long-form Guide</p>
+        <h1>Complete Stick Drift Diagnosis Workflow</h1>
+        <p>
+          Use this workflow in order. It is designed to help you isolate software settings, firmware behavior, and true hardware wear before buying replacement parts.
+        </p>
+      </header>
+
+      <section class="page-grid">
+        <article class="page-card">
+          <h2>1) Confirm the Symptom</h2>
+          <p>
+            Drift means movement is registered while the stick is physically centered. Test this in two places: the console menu and at least one game. If drift appears only in one game, check that game's deadzone options first. If drift appears everywhere, continue with firmware and hardware checks.
+          </p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Symptom</th>
+                  <th>Likely cause</th>
+                  <th>Best first action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Slow camera creep</td>
+                  <td>Small center offset</td>
+                  <td>Run calibration, increase deadzone slightly</td>
+                </tr>
+                <tr>
+                  <td>Sudden directional pull</td>
+                  <td>Worn or contaminated module</td>
+                  <td>Clean module area and retest</td>
+                </tr>
+                <tr>
+                  <td>Drift after warm play sessions</td>
+                  <td>Thermal expansion and wear</td>
+                  <td>Retest cold and warm, compare values</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="page-card">
+          <h2>2) Firmware and Platform Validation</h2>
+          <p>
+            Update your controller firmware before changing calibration values. On Xbox, use Xbox Accessories. On PlayStation, update through the console system flow. Then test using wired USB to remove Bluetooth packet jitter from the diagnosis. If wired and wireless results differ heavily, prioritize connection stability before making profile changes.
+          </p>
+          <ul>
+            <li>Disable duplicate remapping tools while testing.</li>
+            <li>Use one platform at a time so results are comparable.</li>
+            <li>Record the environment and test date in your notes.</li>
+          </ul>
+        </article>
+
+        <article class="page-card">
+          <h2>3) Calibration and Deadzone Tuning</h2>
+          <p>
+            The browser tool on this site samples axis values at rest and computes center offsets and deadzones. Run three passes and keep the cleanest profile. A good profile should remove neutral drift while preserving low-speed aiming. If your deadzone must exceed comfortable aiming levels, hardware service is usually required.
+          </p>
+          <ol>
+            <li>Map axes with deliberate full-circle motions.</li>
+            <li>Run calibration with hands off both sticks.</li>
+            <li>Export profile JSON for rollback and comparison.</li>
+            <li>Apply the smallest deadzone that stabilizes neutral input.</li>
+          </ol>
+        </article>
+
+        <article class="page-card">
+          <h2>4) Hardware Service Decision</h2>
+          <p>
+            If drift returns immediately after calibration and cleaning, the analog module is probably worn. Replacing the module is the long-term fix. If you are not experienced with soldering, use a repair shop. Software compensation remains useful after hardware replacement for minor per-device tolerance adjustments.
+          </p>
+          <p class="small-muted">
+            Last technical review: February 28, 2026.
+          </p>
+        </article>
+
+        <article class="page-card">
+          <h2>Reference Footnotes</h2>
+          <ol class="footnote-list">
+            <li><a href="https://developers.google.com/search/docs/essentials" target="_blank" rel="noopener">Google Search Essentials</a></li>
+            <li><a href="https://developers.google.com/search/docs/essentials/spam-policies" target="_blank" rel="noopener">Google spam policies</a></li>
+            <li><a href="https://support.google.com/adsense/answer/81904?hl=en" target="_blank" rel="noopener">AdSense approval troubleshooting</a></li>
+          </ol>
+          <div class="inline-links">
+            <a href="./faq.html">Read FAQ</a>
+            <a href="./about.html">About this site</a>
+            <a href="./contact.html">Contact support</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="./index.html">Tool</a>
+        <a href="./faq.html">FAQ</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <a href="./editorial-policy.html">Editorial Policy</a>
+      </div>
+      <p class="footer-copy">Stick Drift Fixer - Last updated February 28, 2026.</p>
+    </footer>
+  </body>
+</html>
