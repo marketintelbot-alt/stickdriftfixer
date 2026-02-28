@@ -353,10 +353,6 @@ button.danger {
   margin-top: 10px;
 }
 
-.footnote-list li + li {
-  margin-top: 8px;
-}
-
 .table-wrap {
   overflow-x: auto;
 }
