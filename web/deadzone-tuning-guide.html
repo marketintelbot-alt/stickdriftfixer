@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Deadzone tuning guide for reducing drift while preserving aiming precision." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://stickdriftfixer.onrender.com/deadzone-tuning-guide.html" />
+    <title>Deadzone Tuning Guide | Stick Drift Fixer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape bg-shape-a"></div>
+    <div class="bg-shape bg-shape-b"></div>
+    <main class="page-main">
+      <header class="site-header">
+        <a class="brand" href="./index.html">Stick Drift Fixer</a>
+        <nav class="top-nav" aria-label="Primary">
+          <a href="./index.html">Home</a>
+          <a href="./tool.html">Tool</a>
+          <a href="./guide.html">Guide</a>
+          <a href="./faq.html">FAQ</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <header class="page-hero">
+        <p class="eyebrow">Tuning</p>
+        <h1>Deadzone Tuning Without Killing Aim Precision</h1>
+        <p>Use this method to reduce neutral drift while keeping low-speed stick control usable.</p>
+      </header>
+
+      <section class="page-grid">
+        <article class="page-card">
+          <h2>Why Deadzone Is a Tradeoff</h2>
+          <p>
+            Deadzone removes small input values around center. A larger deadzone hides drift more aggressively but also removes fine aiming movement. A smaller deadzone preserves precision but may allow visible drift. The right value is the minimum amount that stabilizes neutral input in your real play conditions.
+          </p>
+        </article>
+
+        <article class="page-card">
+          <h2>Practical Tuning Sequence</h2>
+          <ol>
+            <li>Calibrate with hands off the sticks.</li>
+            <li>Start with low deadzone values and test neutral stability.</li>
+            <li>Increase in small increments until unwanted movement stops.</li>
+            <li>Retest precision aiming at low stick deflection.</li>
+            <li>Save and label profile by controller and date.</li>
+          </ol>
+          <p>
+            Keep per-controller profiles. Two controllers of the same model can still need different deadzones due to wear variance.
+          </p>
+        </article>
+
+        <article class="page-card">
+          <h2>Signs You Should Stop Tuning and Repair</h2>
+          <ul>
+            <li>Drift returns immediately after each calibration pass.</li>
+            <li>Required deadzone becomes so high that aiming feels delayed.</li>
+            <li>One axis shows unstable center values across short retests.</li>
+            <li>Stick feel includes mechanical roughness or spring weakness.</li>
+          </ul>
+          <div class="inline-links">
+            <a href="./tool.html">Open calibration tool</a>
+            <a href="./guide.html">Full workflow</a>
+          </div>
+        </article>
+
+        <article class="page-card">
+          <h2>Profile Logging Template</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Controller</th>
+                  <th>Left DZ</th>
+                  <th>Right DZ</th>
+                  <th>Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>YYYY-MM-DD</td>
+                  <td>Model + serial ref</td>
+                  <td>0.05</td>
+                  <td>0.06</td>
+                  <td>Stable neutral, good aim</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="small-muted">Last reviewed: February 28, 2026.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="./index.html">Home</a>
+        <a href="./tool.html">Tool</a>
+        <a href="./guide.html">Guide</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+      </div>
+      <p class="footer-copy">Stick Drift Fixer - Last updated February 28, 2026.</p>
+    </footer>
+  </body>
+</html>

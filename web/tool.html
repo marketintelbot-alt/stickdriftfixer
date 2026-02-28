@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Interactive browser tool for mapping controller axes and calibrating stick drift profiles." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://stickdriftfixer.onrender.com/tool.html" />
+    <title>Calibration Tool | Stick Drift Fixer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape bg-shape-a"></div>
+    <div class="bg-shape bg-shape-b"></div>
+
+    <main class="app-shell">
+      <header class="site-header">
+        <a class="brand" href="./index.html">Stick Drift Fixer</a>
+        <nav class="top-nav" aria-label="Primary">
+          <a href="./index.html">Home</a>
+          <a href="./tool.html" aria-current="page">Tool</a>
+          <a href="./guide.html">Guide</a>
+          <a href="./faq.html">FAQ</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <header class="hero">
+        <p class="eyebrow">Interactive Utility</p>
+        <h1>Controller Drift Calibration Tool</h1>
+        <p class="subtitle">
+          Connect a gamepad, map stick axes with circular movement, calibrate center and deadzone values, and export a profile for comparison.
+        </p>
+        <p id="connectionStatus" class="chip">No gamepad connected</p>
+      </header>
+
+      <section class="grid" aria-label="Calibration tool">
+        <article class="card">
+          <h2>Gamepad</h2>
+          <div class="row">
+            <label for="gamepadSelect">Device</label>
+            <select id="gamepadSelect"></select>
+          </div>
+          <div class="actions">
+            <button id="refreshPadsBtn">Refresh Devices</button>
+            <button id="useFirstBtn">Use First Connected</button>
+          </div>
+          <p class="hint">Use a Chromium-based browser for best Gamepad API support.</p>
+        </article>
+
+        <article class="card">
+          <h2>Mapping + Calibration</h2>
+          <div class="actions">
+            <button id="mapAxesBtn">Run Axis Mapping Wizard</button>
+            <button id="calibrateBtn">Calibrate Profile</button>
+          </div>
+          <p id="mappingLabel" class="mono">Mapping: left=(0,1) right=(2,3)</p>
+          <p id="profileLabel" class="mono">Profile: not calibrated</p>
+        </article>
+
+        <article class="card span-2">
+          <h2>Live Sticks</h2>
+          <div class="sticks">
+            <div class="stick-panel">
+              <h3>Left Stick</h3>
+              <p id="leftRaw" class="mono">Raw: (0.000, 0.000)</p>
+              <p id="leftFixed" class="mono">Fixed: (0.000, 0.000)</p>
+              <div class="meter"><div id="leftMeter" class="meter-fill"></div></div>
+            </div>
+            <div class="stick-panel">
+              <h3>Right Stick</h3>
+              <p id="rightRaw" class="mono">Raw: (0.000, 0.000)</p>
+              <p id="rightFixed" class="mono">Fixed: (0.000, 0.000)</p>
+              <div class="meter"><div id="rightMeter" class="meter-fill"></div></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card span-2">
+          <h2>Profiles</h2>
+          <div class="actions wrap">
+            <button id="saveLocalBtn">Save To Browser</button>
+            <button id="loadLocalBtn">Load From Browser</button>
+            <button id="exportBtn">Export JSON</button>
+            <button id="importBtn">Import JSON</button>
+            <button id="resetBtn" class="danger">Reset</button>
+          </div>
+          <input id="importInput" type="file" accept="application/json" hidden />
+          <pre id="profileDump" class="dump"></pre>
+        </article>
+
+        <article class="card span-2">
+          <h2>Session Log</h2>
+          <pre id="log" class="log"></pre>
+        </article>
+      </section>
+
+      <section class="content-stack">
+        <article class="content-card">
+          <h2>Important Limitation</h2>
+          <p>
+            This calibration utility can reduce gameplay drift symptoms but cannot physically repair worn analog hardware. If severe drift remains after calibration, use cleaning and hardware service workflows from the main guides.
+          </p>
+          <div class="inline-links">
+            <a href="./guide.html">Open full guide</a>
+            <a href="./deadzone-tuning-guide.html">Deadzone tuning guide</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="./index.html">Home</a>
+        <a href="./guide.html">Guide</a>
+        <a href="./faq.html">FAQ</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+      </div>
+      <p class="footer-copy">Stick Drift Fixer - Last updated February 28, 2026.</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

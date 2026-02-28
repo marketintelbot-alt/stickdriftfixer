@@ -149,11 +149,64 @@ a {
   font-weight: 500;
 }
 
+.hero-cta {
+  margin-top: 14px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pill-link {
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.78);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.pill-link:hover {
+  background: #ffffff;
+}
+
 .grid {
   margin-top: 18px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
+}
+
+.feature-grid {
+  margin-top: 18px;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.feature-card {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(17, 28, 39, 0.06);
+}
+
+.feature-card h2 {
+  margin: 6px 0 8px;
+  font-size: 1.08rem;
+}
+
+.feature-card p {
+  margin: 0 0 10px;
+  line-height: 1.55;
+  color: #27363f;
+}
+
+.feature-card a {
+  font-weight: 600;
 }
 
 .card,
@@ -331,6 +384,10 @@ button.danger {
   gap: 12px;
 }
 
+.cta-panel {
+  background: linear-gradient(160deg, rgba(14, 127, 112, 0.12), rgba(255, 255, 255, 0.92));
+}
+
 .content-card p,
 .page-card p,
 .page-card li,
@@ -428,6 +485,10 @@ th {
 }
 
 @media (max-width: 860px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
   .grid {
     grid-template-columns: 1fr;
   }

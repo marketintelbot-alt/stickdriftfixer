@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="PlayStation stick drift diagnosis guide for DualSense and DualShock controllers." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://stickdriftfixer.onrender.com/playstation-drift-guide.html" />
+    <title>PS5 Stick Drift Guide | Stick Drift Fixer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape bg-shape-a"></div>
+    <div class="bg-shape bg-shape-b"></div>
+    <main class="page-main">
+      <header class="site-header">
+        <a class="brand" href="./index.html">Stick Drift Fixer</a>
+        <nav class="top-nav" aria-label="Primary">
+          <a href="./index.html">Home</a>
+          <a href="./tool.html">Tool</a>
+          <a href="./guide.html">Guide</a>
+          <a href="./faq.html">FAQ</a>
+          <a href="./about.html">About</a>
+          <a href="./contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <header class="page-hero">
+        <p class="eyebrow">PlayStation</p>
+        <h1>PS5 Stick Drift Diagnosis Guide</h1>
+        <p>Use this checklist to isolate software settings, firmware behavior, and physical stick wear on DualSense controllers.</p>
+      </header>
+
+      <section class="page-grid">
+        <article class="page-card">
+          <h2>Step 1: Confirm Drift Outside One Game</h2>
+          <p>
+            Start on the PlayStation home interface. If cursor movement appears without touching the stick, you likely have baseline drift. Then verify in at least two games with different aim systems. If drift appears in one game only, review that title's deadzone, response curve, and sensitivity settings before assuming hardware wear.
+          </p>
+          <p>
+            A reliable diagnosis starts with consistent test conditions: same controller, same platform profile, same room temperature, and the same wired or wireless mode each pass. Do not compare one wired test to one wireless test and treat the result as final.
+          </p>
+        </article>
+
+        <article class="page-card">
+          <h2>Step 2: Update Firmware and Retest</h2>
+          <p>
+            Update your system software and controller firmware first. Firmware can improve filtering behavior and connection handling, which may reduce apparent drift in some edge cases. However, firmware will not reverse component wear inside the analog module.
+          </p>
+          <ul>
+            <li>Charge controller fully before testing.</li>
+            <li>Test USB first, then test Bluetooth as a separate pass.</li>
+            <li>Disable accessibility remaps while diagnosing.</li>
+          </ul>
+        </article>
+
+        <article class="page-card">
+          <h2>Step 3: Measure With Calibration Tool</h2>
+          <p>
+            Use the browser tool on this site to map stick axes and collect center/deadzone values while your hands are off the sticks. Run at least three calibration passes and keep the cleanest result. If center offsets jump significantly between passes, you may have unstable hardware behavior rather than a simple configuration issue.
+          </p>
+          <div class="inline-links">
+            <a href="./tool.html">Open calibration tool</a>
+            <a href="./deadzone-tuning-guide.html">Deadzone tuning guide</a>
+          </div>
+        </article>
+
+        <article class="page-card">
+          <h2>Step 4: Decide Clean, Tune, or Repair</h2>
+          <p>
+            If drift is mild, deadzone tuning is usually enough for normal play. If drift is moderate and inconsistent, cleaning may improve behavior temporarily. If drift is strong, constant, or quickly returns after tuning, analog module replacement is typically the long-term fix.
+          </p>
+          <p class="small-muted">Last reviewed: February 28, 2026.</p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-links">
+        <a href="./index.html">Home</a>
+        <a href="./tool.html">Tool</a>
+        <a href="./guide.html">Guide</a>
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+      </div>
+      <p class="footer-copy">Stick Drift Fixer - Last updated February 28, 2026.</p>
+    </footer>
+  </body>
+</html>
